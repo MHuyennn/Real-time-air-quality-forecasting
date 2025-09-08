@@ -30,7 +30,7 @@ st.markdown(
 )
 
 # Thêm thư mục SOFTS vào sys.path (thay đường dẫn này bằng đường dẫn thực tế trên máy của bạn)
-SOFTS_PATH = r"D:\This\CS\AQI-Globe\AQI-Globe\SOFTS"
+SOFTS_PATH = r"SOFTS"
 sys.path.append(SOFTS_PATH)
 
 # Kiểm tra xem có thể import Exp_Custom không
@@ -298,7 +298,7 @@ def share_pollutants(data, distance_threshold=50):
     return updated_data
 
 # Hàm tải mô hình
-def load_model(model_path=r"D:\This\CS\AQI-Globe\AQI-Globe\softs.pt"):
+def load_model(model_path=r"softs.pt"):
     import argparse
     config = {
         'root_path': './',
@@ -783,4 +783,5 @@ fig_line.update_layout(
     xaxis_title="Thời gian",
     showlegend=True
 )
+
 st.plotly_chart(fig_line, use_container_width=True)
