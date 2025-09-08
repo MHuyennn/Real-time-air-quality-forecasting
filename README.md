@@ -12,23 +12,25 @@ This project provides a real-time air quality monitoring and forecasting system,
 ---
 
 ## Environment Setup  
-
 ### Requirements  
 - Python 3.9 or higher  
 
-### Installation  
-```bash
+### Installation
+```
 pip install -r requirements.txt
+```
 
 # How to Run the Application  
-
-## 1. Start the API backend (FastAPI)  
-```bash
+## 1. Start the API backend (FastAPI)
+```
 python main.py
+```
 The API will run at: http://localhost:8000/data
 
 ## 2. Start the Streamlit dashboard
+```
 streamlit run app.py
+```
 Open the browser at: http://localhost:8501
 
 # Features
