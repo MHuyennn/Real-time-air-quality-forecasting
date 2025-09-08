@@ -46,7 +46,7 @@ def get_param(column):
     return column.split('_')[1]
 
 def fetch_data_from_mongodb():
-    client = MongoClient('mongodb+srv://dbUser:123@openaq.mqifn0v.mongodb.net/?retryWrites=true&w=majority&appName=OpenAQ')
+    client = MongoClient("mongodb+srv://<username>:<password>@<cluster-url>") #Thay bằng đường dẫn của bạn
     db = client['openaq_db']
     
     data = {col: [] for col in columns}
@@ -100,4 +100,5 @@ async def get_data():
 
 if __name__ == "__main__":
     import uvicorn
+
     uvicorn.run(app, host="0.0.0.0", port=8000)
